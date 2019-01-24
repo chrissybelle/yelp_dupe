@@ -1,5 +1,5 @@
 # yelp_dupe
-https://yelpdupe.herokuapp.com/
+https://cbelle-yelpdupe.herokuapp.com/
 
 Built with React.js
 
