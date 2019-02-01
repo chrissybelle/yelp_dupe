@@ -3,13 +3,15 @@
     flex-direction: column;
     justify-content: space-between;
     width: 16.66rem;
-    margin: 0 .5rem 2.3rem .5rem;
+    margin: 0 .5rem 3rem .5rem;
     font-family: "Georgia";
   }
   
   .Business .image-container {
     height: 16.66rem;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 0;
   }
   
   .Business h2 {
@@ -35,6 +37,7 @@
   .Business-information {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 2rem;
   }
   
   .Business-information p {
@@ -66,3 +69,36 @@
     font-size: .88rem;
     line-height: 1rem;
   }
+
+  .business-img {
+    display: block;
+  }
+
+  .overlay {
+    font-family: Poppins;
+    position: absolute; 
+    bottom: 40%; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    color: #CCA43B; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: #CCA43B;
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+
+@media only screen and (max-width: 800px) {
+
+  .Business-information {
+    padding-bottom: 2rem;
+    border-bottom: 3px double #cccccc;
+  }
+
+}

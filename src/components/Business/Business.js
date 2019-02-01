@@ -8,7 +8,8 @@ class Business extends React.Component {
         return (
             <div className="Business">
                 <div className="image-container">
-                    <img src={business.imageSrc} alt="" />
+                    <img className="business-img" src={business.imageSrc} alt="" />
+                    <div className="overlay">{business.isClosed ? "Closed" : "Open"}</div>
                 </div>
                 <h2><a href={business.url}>{business.name}</a></h2>
                 <div className="Business-information">
