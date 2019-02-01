@@ -76,7 +76,7 @@
 
   @media only screen and (max-width: 560px) {
     .SearchBar {
-      background-image: url('./background_search_mobile1.jpg');
+      background-image: url('./background_search_mobile1.png');
     }
     .SearchBar-sort-options ul {
       margin-left: 2rem;
