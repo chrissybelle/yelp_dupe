@@ -67,6 +67,11 @@ class SearchBar extends React.Component {
     }
 
     render() {
+
+        const { term, location} = this.state;
+        const isEnabled = term.length>0 && location.length>0;
+
+
         return (
             <div className="SearchBar">
                 <div className="SearchBar-sort-options">
@@ -74,15 +79,15 @@ class SearchBar extends React.Component {
                         {this.renderSortByOptions()}
                     </ul>
                 </div>
-                <div className="SearchBar-fields">
-                    <input placeholder="Search keyword" onChange={this.handleTermChange} />
-                    <input placeholder="Location" onChange={this.handleLocationChange} />
-                </div>
+                <form className="SearchBar-fields">
+                    <input type="text" placeholder="Search keyword" pattern="[A-Za-z]" onChange={this.handleTermChange} required />
+                    <input type="text" placeholder="Location" onChange={this.handleLocationChange} pattern="[A-Za-z]" required />
+                </form>
                 <div className="SearchBar-submit">
-                    <a onClick={this.handleSearch}>Find</a>
+                    <button onClick={this.handleSearch} disabled={!isEnabled}>Find</button>
                 </div>
             </div>
-        )
+        ) 
     }
 }
 

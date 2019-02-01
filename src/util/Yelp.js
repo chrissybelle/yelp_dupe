@@ -9,9 +9,13 @@ const Yelp = {
         }).then(response => {
                 return response.json();
             }).then(jsonResponse => {
-                if (jsonResponse.businesses) {
+                console.log(jsonResponse);
+                console.log(jsonResponse.businesses);
+                if (jsonResponse.error) {
+                    console.log("no results");
+                    return "error";
+                } else {
                     return jsonResponse.businesses.map(result => {
-                        console.log(result);
                         return {
                             id: result.id,
                             imageSrc: result.image_url,
@@ -25,8 +29,11 @@ const Yelp = {
                             reviewCount: result.review_count,
                             url: result.url
                         }
-                    })
+                    });
                 }
+            })
+            .catch((error) => {
+                console.log(error);
             });
     }
 }

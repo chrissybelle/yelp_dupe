@@ -5,7 +5,7 @@
     background-image: url('./background_search_desktop1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 27rem;
+    height: 20rem;
     margin-top: 3rem;
   }
   .SearchBar-sort-options ul {
@@ -53,18 +53,27 @@
   .SearchBar-submit {
     text-align: center;
   }
-  .SearchBar-submit a {
+  .SearchBar-submit button {
     border-radius: 4px;
     padding: .72rem 1.7rem;
     background-color: #CCA43B;
     color: #E5E5E5;
     font-weight: 600;
     transition: background-color .5s;
+    border: 0;
   }
-  .SearchBar-submit a:hover {
+  .SearchBar-submit button:hover {
     cursor: pointer;
     background-color: #242f40;
+    border: 0;
   }
+  .SearchBar-submit button:disabled {
+    cursor: pointer;
+    background-color: #bdaa5f;
+    transition: background-color 1s;
+    border: 0;
+  }
+
   @media only screen and (max-width: 560px) {
     .SearchBar {
       background-image: url('./background_search_mobile1.jpg');

@@ -3,4 +3,16 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 4.4rem 10%;
+    background-color: #ffffff;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 10rem;
+  }
+
+  .no-results {
+    font-family: Poppins;
+    font-size: 2rem;
+    color: rgb(196, 59, 21);
+    background-color: none;
+    text-shadow: 1px 1px #999999;
   }
